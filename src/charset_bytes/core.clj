@@ -3,10 +3,11 @@
 
 (defn get-bytes
   "Calls .getBytes() on value. The charset argument can be a
-   java.nio.charset.Charset object or a String name of a charset,
-   such as \"utf-8\". Returns byte[]"
-  [value charset]
-  (.getBytes value charset))
+   java.nio.charset.Charset object or the String name of a charset,
+   such as \"utf-8\". If no charset is specified the default
+   charset is used. Returns byte[]"
+  ([value] (.getBytes value))
+  ([value charset] (.getBytes value charset)))
 
 (defn ascii-bytes
   "Returns value encoded as an ascii byte[]"

@@ -11,6 +11,8 @@
   (= byte-array-class (type object)))
 
 (deftest test-get-bytes
+  (is (byte-array? (get-bytes "test string")))
+  (is (thrown? Exception (get-bytes :whoops)))
   (is (byte-array? (get-bytes "test string" "ascii")))
   (is (byte-array? (get-bytes "test string" ascii)))
   (is (thrown? Exception (get-bytes :whoops ascii)))
