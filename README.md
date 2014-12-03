@@ -1,3 +1,7 @@
+#### This project is deprecated
+
+The functionality of charset-bytes has been moved into [charset](https://github.com/clavoie/charset). Please use charset going forward, as charset-bytes is no longer being maintained.
+
 charset-bytes
 =============
 
